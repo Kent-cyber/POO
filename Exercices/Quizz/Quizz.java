@@ -1,4 +1,4 @@
-package Exercices;
+package Exercices.Quizz;
 
 public class Quizz {
     
@@ -39,6 +39,5 @@ public class Quizz {
     public void afficherBonneReponse() {
         System.out.println("La bonne réponse était " + reponses[bonneReponse - 1]);
     }
-
 /******************** Code à mettre dans le main *******************************************/
 }

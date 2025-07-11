@@ -1,4 +1,4 @@
-package Exercices;
+package Exercices.Music;
 
 import java.util.*;
 

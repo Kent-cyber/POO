@@ -1,4 +1,4 @@
-package Exercices;
+package Exercices.Quizz;
 
 import java.time.*;
 import java.util.*;
@@ -16,6 +16,8 @@ public class Main {
         quizzList.add(new Quizz("Combien y a-t-il de régions en France en comptant l'Outre-mer ?", new String[]{"8", "13", "18"}, 3));
         quizzList.add(new Quizz("Quel est le plus petit pays du monde ?", new String[]{"Vatican", "Monaco", "Saint-Marin"}, 1));
 
+        Collections.shuffle(quizzList); // Mélange aléatoire des questions
+
         int score = 0; // Initialise le score à 0
 
         int tempsLimiteMinutes = 1; // Ajout du minuteur en 1 minute
@@ -25,7 +27,7 @@ public class Main {
         System.out.println("Bienvenue au quizz sur la géographie, vous avez une minute pour répondre à cinq questions.\nPrêt c'est parti !");
         for (Quizz q : quizzList) {
             if (LocalDateTime.now().isAfter(end)) {
-                System.out.println("\nTemps écoulé ! Le quizz est terminé.");
+                System.out.println("\nTemps écoulé ! Le quizz est terminé");
                 break;
             }
 

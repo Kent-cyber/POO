@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
 
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         List<Quizz> quizzList = new ArrayList<>(); // Création de la liste quizz
 
@@ -20,13 +20,13 @@ public class Main {
 
         int score = 0; // Initialise le score à 0
 
-        int tempsLimiteMinutes = 1; // Ajout du minuteur en 1 minute
-        LocalDateTime start = LocalDateTime.now(); // Initialise le début
-        LocalDateTime end = start.plusMinutes(tempsLimiteMinutes); // Initialise la fin
+        int tempsLimiteSecondes = 60; // Ajout du minuteur en 1 minute
+        LocalTime start = LocalTime.now(); // Initialise le début
+        LocalTime end = start.plusSeconds(tempsLimiteSecondes); // Initialise la fin
         
         System.out.println("Bienvenue au quizz sur la géographie, vous avez une minute pour répondre à cinq questions.\nPrêt c'est parti !");
         for (Quizz q : quizzList) {
-            if (LocalDateTime.now().isAfter(end)) {
+            if (LocalTime.now().isAfter(end)) {
                 System.out.println("\nTemps écoulé ! Le quizz est terminé");
                 break;
             }
